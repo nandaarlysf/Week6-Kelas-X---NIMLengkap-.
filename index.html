@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Praktikum 6 - DOM & Fetch API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Praktikum 6: DOM, Event Handling, & Fetch API</h1>
+            <p>Nama: Anandya Arlys Firjatulloh | NIM: 20240140002</p>
+        </header>
+
+        <!-- Bagian 1: Form Interaktif (DOM & Event Handling) -->
+        <section class="card">
+            <h2>Form Pendaftaran Produk / Diskon</h2>
+            <form id="productForm">
+                <div class="form-group">
+                    <label for="productName">Nama Produk:</label>
+                    <input type="text" id="productName" placeholder="Masukkan nama produk...">
+                </div>
+                <div class="form-group">
+                    <label for="productQty">Jumlah (Qty):</label>
+                    <input type="number" id="productQty" placeholder="Masukkan jumlah...">
+                </div>
+                <button type="submit" id="submitBtn">Proses Data</button>
+            </form>
+            <!-- Pesan Umpan Balik & Hasil DOM -->
+            <div id="formFeedback" class="feedback hidden"></div>
+        </section>
+
+        <!-- Bagian 2: Fetch API Data Produk -->
+        <section class="card">
+            <h2>Daftar Produk dari DummyJSON API</h2>
+            <button id="fetchBtn">Muat Data Produk</button>
+            
+            <!-- Indikator Loading & Error -->
+            <div id="loadingIndicator" class="hidden">Memuat data produk...</div>
+            <div id="errorContainer" class="hidden error-msg"></div>
+
+            <!-- Kontainer Tampilan Produk -->
+            <div id="productContainer" class="product-grid"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
